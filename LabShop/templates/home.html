@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab Devices</title>
+</head>
+<body>
+    <h1>Available Lab Devices</h1>
+    <ul>
+        {% for device in devices %}
+            <li>
+                <h2>{{ device.name }}</h2>
+                <img src="{{ device.picture.url }}" alt="{{ device.name }}" style="width:200px;height:200px;">
+                <p>{{ device.description }}</p>
+                <p>Price: ${{ device.price }}</p>
+                <p>Quantity: {{ device.quantity }}</p>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
